@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    int vector[1000];
+    
+    // Citirea numărului de elemente
+    scanf("%d", &n);
+    
+    // Citirea elementelor vectorului
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &vector[i]);
+    }
+    
+    // Afișarea elementelor cu indici pari în ordinea crescătoare a indicilor
+    for (int i = 0; i < n; i += 2) {
+        printf("%d ", vector[i]);
+    }
+    
+    printf("\n");
+    
+    // Afișarea elementelor cu indici impari în ordinea descrescătoare a indicilor
+    for (int i = (n % 2 == 0 ? n - 1 : n - 2); i >= 0; i -= 2) {
+        printf("%d ", vector[i]);
+    }
+    
+    return 0;
+}
